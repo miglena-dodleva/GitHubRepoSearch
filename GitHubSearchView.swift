@@ -13,7 +13,8 @@ struct GitHubSearchView: View {
     @EnvironmentObject var githubRepo: MyGithubRepository
     
     @State private var query = ""
-    @State private var error = ""
+    @State private var error: Error? = nil
+    @State private var showingAlert = false
     @State private var isLoading: Bool = false
     @State private var results: [GithubRepo] = []
     
@@ -38,7 +39,8 @@ struct GitHubSearchView: View {
             } catch {
                 //  TODO: Error handling
                 
-                print(error)
+                showingAlert = true
+                self.error = error
             }
             
             isLoading = false
@@ -60,11 +62,8 @@ struct GitHubSearchView: View {
     
     var body: some View {
         
-    
-        
         NavigationStack {
             
-                //ForEach(searchResults, id: \.self) { name in
                 List{
                     ForEach(0..<results.count, id: \.self) { index in
                         
@@ -73,11 +72,12 @@ struct GitHubSearchView: View {
                                 loadData()
                             }
                         }
-                        
-                        
-//                            .onAppear {self.getNextPage(index: repo)}
                     }
                 }
+                .alert(error?.localizedDescription ?? "Something went wrong", isPresented: $showingAlert) {
+                            Button("OK", role: .cancel) { }
+                        }
+            
             if isLoading{ ProgressView()}
         }
         .navigationTitle("Search")
