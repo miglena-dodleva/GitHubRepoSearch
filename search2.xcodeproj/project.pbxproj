@@ -54,6 +54,8 @@
 		48961193296EB4CF00402502 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48961192296EB4CF00402502 /* ImageDetailView.swift */; };
 		48961194296EB4CF00402502 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48961192296EB4CF00402502 /* ImageDetailView.swift */; };
 		48E6723F296C65F3008D3D76 /* GitHubDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6723E296C65F3008D3D76 /* GitHubDetails.swift */; };
+		4C8D1B9B2989417B00A8A610 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D1B9A2989417B00A8A610 /* RepositoryView.swift */; };
+		4C8D1B9C2989417B00A8A610 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D1B9A2989417B00A8A610 /* RepositoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,7 @@
 		4896118F296EB20000402502 /* RepoLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoLinkView.swift; sourceTree = "<group>"; };
 		48961192296EB4CF00402502 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 		48E6723E296C65F3008D3D76 /* GitHubDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubDetails.swift; sourceTree = "<group>"; };
+		4C8D1B9A2989417B00A8A610 /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,7 @@
 		485BA28D2964197E0081C336 = {
 			isa = PBXGroup;
 			children = (
+				4C8D1B9A2989417B00A8A610 /* RepositoryView.swift */,
 				48961192296EB4CF00402502 /* ImageDetailView.swift */,
 				4896118F296EB20000402502 /* RepoLinkView.swift */,
 				4896118C296EADE400402502 /* ProfileLinkView.swift */,
@@ -350,6 +354,7 @@
 				485BA2C429642C340081C336 /* GitHubImagePage1.swift in Sources */,
 				4896118D296EADE400402502 /* ProfileLinkView.swift in Sources */,
 				483036042965842A00BE71CB /* GitHubRepository.swift in Sources */,
+				4C8D1B9B2989417B00A8A610 /* RepositoryView.swift in Sources */,
 				485BA29A2964197E0081C336 /* search2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +371,7 @@
 				4830362D2965BDB300BE71CB /* GithubApi.swift in Sources */,
 				483036152965BC9300BE71CB /* Owner.swift in Sources */,
 				4830361D2965BCEF00BE71CB /* GithubRepo.swift in Sources */,
+				4C8D1B9C2989417B00A8A610 /* RepositoryView.swift in Sources */,
 				483036312965BDCA00BE71CB /* MyGithubApi.swift in Sources */,
 				483036212965BD3D00BE71CB /* Router.swift in Sources */,
 				483036192965BCC600BE71CB /* GithubResponse.swift in Sources */,

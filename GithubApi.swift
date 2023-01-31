@@ -11,6 +11,6 @@ import Foundation
 protocol GithubApi {
     
     
-    func searchRepository(query: String, page: Int, pageSize: Int) async throws -> [GithubRepo]
+    func searchRepository(query: String, page: Int, pageSize: Int) async throws -> GithubResponse
 }
 

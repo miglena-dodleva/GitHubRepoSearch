@@ -11,7 +11,7 @@ import SwiftUI
 
 protocol GithubRepository: ObservableObject{
 
-    func searchRepositories(query: String, page: Int) async throws -> [GithubRepo]
+    func searchRepositories(query: String, page: Int) async throws -> GithubResponse
 }
 
 

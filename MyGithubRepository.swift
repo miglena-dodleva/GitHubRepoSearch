@@ -8,14 +8,6 @@
 
 import Foundation
 
-//
-//struct State {
-//    
-//    var page: Int = 0
-//    var query: String?
-//    var repositories: [GithubRepo] = []
-//}
-
 
 class MyGithubRepository: GithubRepository {
     
@@ -27,7 +19,7 @@ class MyGithubRepository: GithubRepository {
     }
     
     
-    func searchRepositories(query: String, page: Int) async throws -> [GithubRepo] {
+    func searchRepositories(query: String, page: Int) async throws -> GithubResponse {
         
         return try await githubApi.searchRepository(query: query, page: page, pageSize: 10)
         

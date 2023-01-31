@@ -19,7 +19,7 @@ class MyGithubApi: GithubApi {
         self.router = router
     }
     
-    func searchRepository(query: String, page: Int, pageSize: Int) async throws -> [GithubRepo] {
+    func searchRepository(query: String, page: Int, pageSize: Int) async throws -> GithubResponse {
         
         let requestUrl = URL(string: "\(router.searchEndpoint)?q=\(query)&per_page=\(pageSize)&page=\(page)")!
         
@@ -30,7 +30,7 @@ class MyGithubApi: GithubApi {
         //let decoder = JSONDecoder()
         let result = try JSONDecoder().decode(GithubResponse.self, from: data)
         
-        return result.items
+        return result
         
     }
     

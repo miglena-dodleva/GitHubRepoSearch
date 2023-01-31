@@ -15,8 +15,10 @@ struct GitHubSearchView: View {
     @State private var query = ""
     @State private var error = ""
     @State private var isLoading: Bool = false
-    @State private var currentPage: Int = 0
     @State private var results: [GithubRepo] = []
+    
+    @State private var currentPage: Int = 0
+    @State private var totalCount: Int = 0
     
     @MainActor
     private func loadData() {
@@ -26,9 +28,12 @@ struct GitHubSearchView: View {
         Task {
             do {
                 
-                let additionalRecords = try await githubRepo.searchRepositories(query: self.query, page: self.currentPage)
+                let responce = try await githubRepo.searchRepositories(query: self.query, page: self.currentPage)
+                self.totalCount = responce.totalCount
                 
-                results.append(contentsOf: additionalRecords)
+//                if hasMorePage() {
+                    results.append(contentsOf: responce.items)
+//                }
                 
             } catch {
                 //  TODO: Error handling
@@ -41,53 +46,36 @@ struct GitHubSearchView: View {
         
     }
     
-//    private let repo: GithubRepo
-//    init(repository: GithubRepo) {
-//        self.repo = repository
-//    }
-//
+    private func hasMorePage() -> Bool{
+        let totalPages = totalCount/10+1
+        return currentPage <= totalPages
+        
+    }
+    
+    private func getNextPage(index:Int){
+        guard index == results.count-1 else {return}
+        loadData()
+    }
+    
     
     var body: some View {
         
     
         
         NavigationStack {
-           // List(results){ item in
             
                 //ForEach(searchResults, id: \.self) { name in
                 List{
-                    ForEach(results) { repo in
-                                
-                        NavigationLink(destination: GitHubDetails(item: repo)) {
-                            
-                            HStack{
-                                
-                                AsyncImage(url: URL(string: repo.owner.avatar)!, content: {downloadedImage in downloadedImage.resizable()}, placeholder: {Color(uiColor: UIColor.lightGray)}
-                               ).scaledToFit()
-                                .frame(height: 70)
-                                .cornerRadius(4)
-                                //.resizable()
-                                //.frame(width: 80, height: 80)
-                                
-                                //Image(service.Avatar)
-                                    
-                                
-                                VStack(alignment: .leading, spacing: 5){
-                                    Text(repo.name)
-                                        .fontWeight(.semibold)
-                                        .lineLimit(2)
-                                        .minimumScaleFactor(0.5)
-                                    
-                                    Text(repo.description ?? "null")
-                                        .font(.subheadline)
-                                        .foregroundColor(.secondary)
-                                    
-                                }
-                            }.onTapGesture {
-                                UIApplication.shared.open(URL(string: repo.url)!)
+                    ForEach(0..<results.count, id: \.self) { index in
+                        
+                        RepositoryView(repository: self.results[index]).onAppear {
+                            if index == results.count-1 && !isLoading && totalCount > results.count {
+                                loadData()
                             }
-                            .padding(8)
                         }
+                        
+                        
+//                            .onAppear {self.getNextPage(index: repo)}
                     }
                 }
             if isLoading{ ProgressView()}
@@ -96,49 +84,16 @@ struct GitHubSearchView: View {
         .searchable(text: $query)
         .onSubmit(of: .search){
             currentPage = 0
+            results = []
             isLoading = true
             loadData()
+            
         }
         .padding()
     }
 //
-//    var searchResults: [String] {
-//           if searchText.isEmpty {
-//               return searchResults
-//           } else {
-//               return searchResults.filter { $0.contains(searchText) }
-//           }
-//       }
-    
-    
-    
 //    
-//    
-//    enum MyCustomError: Error {
-//        
-//        case invalidURL
-//        case missingData
-//    }
-//    
-    
-//    private func fetchData(completion: @escaping (Result<Data, Error>) -> Void) {
-//
-//        let task = URLSession.shared.dataTask(with: URL(string: "http://api.github.com/search/repositories?q=swift&per_page=2&page=1")!) {
-//            data, response, error in
-//
-//            if let error = error {
-//
-//                // Handle error
-//                completion(.failure(error))
-//            } else if let data = data {
-//
-//                // Handle successful response data
-//                completion(.success(data))
-//            }
-//        }
-//
-//        task.resume()
-//    }
+
 }
 
 struct GitHubSearchView_Previews: PreviewProvider {
