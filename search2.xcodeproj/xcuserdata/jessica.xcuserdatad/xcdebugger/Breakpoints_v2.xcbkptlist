@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "999BC573-8513-40A7-9F94-227BF7FC9359"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4923C646-346D-46DF-82B1-C334F95F6BFC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyGithubApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "searchRepository(query:page:pageSize:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D13B4DC-F163-4B5A-926E-EF709EA314A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyGithubApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "searchRepository(query:page:pageSize:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0D13B4DC-F163-4B5A-926E-EF709EA314A1 - 1a6479f944ba8af0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for search2.MyGithubApi.searchRepository(query: Swift.String, page: Swift.Int, pageSize: Swift.Int) async throws -&gt; Swift.Array&lt;search2.GithubRepo&gt;"
+                  moduleName = "search2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessica/Desktop/search2/MyGithubApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1668">
+               </Location>
+               <Location
+                  uuid = "0D13B4DC-F163-4B5A-926E-EF709EA314A1 - e4d6f4f9d4ed1d88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for search2.MyGithubApi.searchRepository(query: Swift.String, page: Swift.Int, pageSize: Swift.Int) async throws -&gt; Swift.Array&lt;search2.GithubRepo&gt;"
+                  moduleName = "search2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessica/Desktop/search2/MyGithubApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  uuid = "0D13B4DC-F163-4B5A-926E-EF709EA314A1 - b17710bb4df76471"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for search2.MyGithubApi.searchRepository(query: Swift.String, page: Swift.Int, pageSize: Swift.Int) async throws -&gt; Swift.Array&lt;search2.GithubRepo&gt;"
+                  moduleName = "search2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessica/Desktop/search2/MyGithubApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  uuid = "0D13B4DC-F163-4B5A-926E-EF709EA314A1 - b17710bb4df764fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for search2.MyGithubApi.searchRepository(query: Swift.String, page: Swift.Int, pageSize: Swift.Int) async throws -&gt; Swift.Array&lt;search2.GithubRepo&gt;"
+                  moduleName = "search2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessica/Desktop/search2/MyGithubApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "179">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
