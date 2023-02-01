@@ -7,9 +7,9 @@
 
 
 import Foundation
+import SwiftUI
 
-
-class MyGithubRepository: GithubRepository {
+class MyGithubRepository: GithubRepository, ObservableObject {
     
     let githubApi: GithubApi
 //    private(set) var state = State()

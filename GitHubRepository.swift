@@ -5,11 +5,8 @@
 //  Created by Diviana on 4.01.23.
 //
 
-import SwiftUI
 
-
-
-protocol GithubRepository: ObservableObject{
+protocol GithubRepository {
 
     func searchRepositories(query: String, page: Int) async throws -> GithubResponse
 }
