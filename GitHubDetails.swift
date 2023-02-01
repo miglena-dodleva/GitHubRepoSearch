@@ -14,6 +14,19 @@ struct GitHubDetails: View {
     
     var item: GithubRepo
     
+    
+    @State private var isRotated = false
+    var animation: Animation {
+        Animation.easeOut
+    }
+    
+//    @State private var textColor: Color = .clear
+//
+//    private func setAverageColor() {
+//        let uiColor = UIImage(named: item.owner.avatar)?.averageColor ?? .clear
+//            textColor = Color(uiColor)
+//        }
+    
     var body: some View {
         
             ScrollView(.vertical, showsIndicators: false){
@@ -23,9 +36,15 @@ struct GitHubDetails: View {
                     //Image
                     AsyncImage(url: URL(string: item.owner.avatar), content: {downloadedImage in downloadedImage.resizable()}, placeholder: {Color(uiColor: UIColor.lightGray)}
                    ).scaledToFit()
-                    .frame(height: 220)
+                    .frame(height: 200)
                     .cornerRadius(4)
                     .shadow(radius: 10)
+                    .rotationEffect(Angle.degrees(isRotated ? 360 : 0))
+                    .animation(animation)
+                    
+                    Button("Rotate") {
+                                self.isRotated.toggle()
+                            }
                     
                     VStack(alignment: .center, spacing: 20){
                         
@@ -49,7 +68,7 @@ struct GitHubDetails: View {
                         GroupBox("Characteristics:") {
                             Text("Date of creation: \(item.dateofcreation)")
                             Text("Language: \(item.language ?? "null")")
-                            Text(String(item.reviewscount))
+                            Text("Review count: \(item.reviewscount)")
                         }
                         
                         Text("VISIT THE OWNER'S GITHUB PROFILE ")
@@ -79,8 +98,6 @@ struct GitHubDetails: View {
             }//:SCROLL
             //.edgesIgnoringSafeArea(.top)
             
-       
-        
     }
 }
 
@@ -89,81 +106,3 @@ struct GitHubDetails_Previews: PreviewProvider {
         GitHubDetails( item: GithubRepo(id: 44838949, name: "Name", description: "My first api", owner: Avatar(avatar:"https://avatars.githubusercontent.com/u/10639145?v=4", ownername: "Viktor", url: "kjh"), fullname: "Swift-API", language: "c++", reviewscount: 77, dateofcreation: "22.2.2222", url: "kkkkk"))
     }
 }
-                    
-                    
-                    
-//                    //TITILE
-//                    Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-//                        .font(.largeTitle)
-//                        .fontWeight(.heavy)
-//                        .foregroundColor(.blue)
-//
-//                    VStack(alignment: .center){
-//                        HStack{
-//                            Image("images")
-//                                .resizable(capInsets: EdgeInsets(top: 1.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-//                                .aspectRatio(contentMode: .fit)
-//
-//
-//                            GroupBox( "Characteristics:") {
-//                                VStack(alignment: .leading){
-//                                    Text("Created at:")
-//                                        .multilineTextAlignment(.leading)
-//                                    Text("Language:").multilineTextAlignment(.leading)
-//                                    Text("Reviews:")
-//
-//                                }
-//                            }
-//                        }
-//                    }
-//                    VStack(alignment: .center, spacing: 20){
-//                            Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-//
-//
-//                    }
-                    
-//
-//
-//
-//                    HEADER
-//
-//                    VStack(alignment: .leading, spacing: 20){
-////
-//                        //TITILE
-//                        Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-//                            .font(.largeTitle)
-//                            .fontWeight(.heavy)
-//                            .foregroundColor(.blue)
-//////
-////                        //HEADLINE
-////                        Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/).font(.headline).multilineTextAlignment(.center)
-////
-////                        //DESCRIPTION
-////                        Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/).multilineTextAlignment(.leading)
-//
-//                        //SUBHEADLINE
-//                        Text("Characteristics:").fontWeight(.bold).foregroundColor(.blue)
-//
-//                        Image(systemName: "heart")
-
-
-
-                        //LINK
-                     //:VSTAK
-                    
-//                }
-//                .padding()//:VSTAK
-//
-//
-//
-//            }
-//        }
-//
-//    }
-//}
-//
-//struct GitHubDetails_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GitHubDetails()
-//    }
-//}

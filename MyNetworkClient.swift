@@ -17,10 +17,6 @@ class MyNetworkClient: NetworkClient {
 
         let configuration = URLSessionConfiguration.default
 
-//        configuration.httpAdditionalHeaders = ["Accept": "application.json",
-//               "Authorization": "Bearer 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"
-//
-//        ]
         session = URLSession(configuration: configuration)
 
     }

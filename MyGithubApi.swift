@@ -27,7 +27,6 @@ class MyGithubApi: GithubApi {
         
         let (data, _) = try await networkClient.executeRequest(request: request)
         
-        //let decoder = JSONDecoder()
         let result = try JSONDecoder().decode(GithubResponse.self, from: data)
         
         return result

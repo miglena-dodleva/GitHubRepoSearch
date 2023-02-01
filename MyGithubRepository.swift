@@ -22,22 +22,7 @@ class MyGithubRepository: GithubRepository {
     func searchRepositories(query: String, page: Int) async throws -> GithubResponse {
         
         return try await githubApi.searchRepository(query: query, page: page, pageSize: 10)
-        
-//        if query != query {
-//            query = query
-//            page = 0
-//            repositories = []
-//        }
-//
-//        page += 1
-//        do {
-//            let results = try await githubApi.searchRepository(query: query, page: page, pageSize: 10)
-//            repositories.append(contentsOf: results)
-//        } catch {
-//
-//            repositories = []
-//            throw error
-//        }
+    
     }
 }
 
