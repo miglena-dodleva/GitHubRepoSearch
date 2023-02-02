@@ -56,6 +56,7 @@ struct GitHubSearchView: View {
     private func getNextPage(index:Int){
         guard index == results.count-1 else {return}
         loadData()
+        
     }
     
     

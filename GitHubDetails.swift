@@ -41,10 +41,14 @@ struct GitHubDetails: View {
                     .shadow(radius: 10)
                     .rotationEffect(Angle.degrees(isRotated ? 360 : 0))
                     .animation(animation)
+                    .onAppear() {
+                        self.isRotated = true }
                     
-                    Button("Rotate") {
-                                self.isRotated.toggle()
-                            }
+//                    
+//                    
+//                    Button("Rotate") {
+//                                self.isRotated.toggle()
+//                            }
                     
                     VStack(alignment: .center, spacing: 20){
                         
