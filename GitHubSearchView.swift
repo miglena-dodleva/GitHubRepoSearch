@@ -12,10 +12,15 @@ struct GitHubSearchView: View {
     
     @EnvironmentObject var githubRepo: MyGithubRepository
     
+    @Environment(\.isSearching) private var isSearching: Bool
+    @Environment(\.dismissSearch) private var dismissSearch
+    
+    
     @State private var query = ""
     @State private var error: Error? = nil
     @State private var showingAlert = false
     @State private var isLoading: Bool = false
+    
     @State private var results: [GithubRepo] = []
     
     @State private var currentPage: Int = 0
@@ -23,17 +28,23 @@ struct GitHubSearchView: View {
     
     @MainActor
     private func loadData() {
-        
+        self.isLoading = true
         self.currentPage += 1
+        
+        var a = query
+        if a == "" {
+            a = "s"
+        }
         
         Task {
             do {
                 
-                let responce = try await githubRepo.searchRepositories(query: self.query, page: self.currentPage)
+                
+                let responce = try await githubRepo.searchRepositories(query: a, page: self.currentPage)
                 self.totalCount = responce.totalCount
                 
                 
-                    results.append(contentsOf: responce.items)
+                results.append(contentsOf: responce.items)
                 
             } catch {
                 //  TODO: Error handling
@@ -61,13 +72,19 @@ struct GitHubSearchView: View {
     
     
     var body: some View {
-        
-        ZStack {
-            NavigationStack {
-                
+        NavigationStack {
+            ZStack {
+                //                if results.isEmpty{
+                //                    Text("Has no results to show")
+                //                }
+                if results.isEmpty {
+                    if !isLoading {
+                        Text("Has no results to show")
+                    }
+                }
+                else {
                     List{
                         ForEach(0..<results.count, id: \.self) { index in
-                            
                             RepositoryView(repository: self.results[index]).onAppear {
                                 if index == results.count-1 && !isLoading && totalCount > results.count {
                                     loadData()
@@ -76,18 +93,16 @@ struct GitHubSearchView: View {
                         }
                     }
                     .alert(error?.localizedDescription ?? "Something went wrong", isPresented: $showingAlert) {
-                                Button("OK", role: .cancel) { }
-                            }
-                
-    //            if isLoading{ ProgressView()}
+                        Button("OK", role: .cancel) { }
+                    }
+                }
+                //            if isLoading{ ProgressView()}
                 if isLoading{
                     ZStack{
                         Color(.white)
                             .opacity(0.3)
                             .ignoresSafeArea()
                         ProgressView("Fetching GitHub")
-//                            .frame(width: 120, height: 120, alignment: .center)
-//                            .scaleEffect(2)
                             .padding()
                             .background(RoundedRectangle(cornerRadius: 10)
                                 .fill(Color(.systemBackground))
@@ -95,26 +110,35 @@ struct GitHubSearchView: View {
                             .frame(alignment: .center)
                             .shadow(radius: 10)
                     }
-//                    .frame(alignment: .center)
                 }
             }
-            .navigationTitle("Search")
+            .onAppear {
+                
+                loadData()
+            }
+            .navigationTitle("GitHub Search")
             .searchable(text: $query)
             .onSubmit(of: .search){
                 currentPage = 0
                 results = []
                 isLoading = true
                 loadData()
+            }
+            .onChange(of: query){ value in
+                if query.isEmpty && !isSearching {
+//                    nothingToShow = true
+                }
                 
             }
-        .padding()
+            .padding()
         }
     }
+    
 
-}
-
-struct GitHubSearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        GitHubSearchView()
+    
+    struct GitHubSearchView_Previews: PreviewProvider {
+        static var previews: some View {
+            GitHubSearchView()
+        }
     }
 }
