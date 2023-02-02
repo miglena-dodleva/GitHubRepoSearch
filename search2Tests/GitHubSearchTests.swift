@@ -21,5 +21,6 @@ class GitHubSearchTests: XCTestCase {
         XCTAssertEqual(response.items.count, 3)
         XCTAssertEqual(response.items[0].description, "The Swift Programming Language")
         XCTAssertEqual(response.items[0].id, 40)
+        XCTAssertEqual(response.items[2].dateofcreation, "2018-04-24T19:18:14Z")
     }
 }

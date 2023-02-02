@@ -23,14 +23,18 @@ class MyGithubApi: GithubApi {
         
         let requestUrl = URL(string: "\(router.searchEndpoint)?q=\(query)&per_page=\(pageSize)&page=\(page)")!
         
-        let request = URLRequest(url: requestUrl)
+        let request = URLRequest(url: requestUrl, method: .get)
         
-        let (data, _) = try await networkClient.executeRequest(request: request)
+        return try await networkClient.perform(request)
         
-        let result = try JSONDecoder().decode(GithubResponse.self, from: data)
         
-        return result
         
+//       let (data, _) = try await networkClient.executeRequest(request: request)
+//
+//        let result = try JSONDecoder().decode(GithubResponse.self, from: data)
+//
+//        return result
+//
     }
     
     

@@ -1,50 +1,66 @@
 {
-    "total_count": 4,
+    "total_count": 6,
+    "incomplete_results": false,
     "items": [
         {
-            "id": 44,
+            "id": 40,
+            "node_id": "MDEwOlJlcG9zaXRvcnk0NDgzODk0OQ==",
             "name": "swift",
             "full_name": "apple/swift",
+            "private": false,
             "owner": {
                 "login": "apple",
+                "id": 10639145,
                 "avatar_url": "https://avatars.githubusercontent.com/u/10639145?v=4",
+                "url": "https://api.github.com/users/apple",
                 "html_url": "https://github.com/apple"
             },
             "html_url": "https://github.com/apple/swift",
             "description": "The Swift Programming Language",
+            "url": "https://api.github.com/repos/apple/swift",
             "created_at": "2015-10-23T21:15:07Z",
-            "watchers_count”:6000,
-            "language": "C++",
+            "watchers_count": 61723,
+            "language": "C++"
         },
         {
-            "id": 45,
-            "name": “Python”,
-            "full_name": "openstack/py”,
+            "id": 41,
+            "node_id": "MDEwOlJlcG9zaXRvcnk3OTAwMTk=",
+            "name": "swift",
+            "full_name": "openstack/swift",
+            "private": false,
             "owner": {
                 "login": "openstack",
+                "id": 324574,
                 "avatar_url": "https://avatars.githubusercontent.com/u/324574?v=4",
+                "url": "https://api.github.com/users/openstack",
                 "html_url": "https://github.com/openstack"
             },
             "html_url": "https://github.com/openstack/swift",
-            "description": "OpenStack Storage. Mirror of code maintained at opendev.org.",
+            "description": "OpenStack Storage (Swift). Mirror of code maintained at opendev.org.",
+            "url": "https://api.github.com/repos/openstack/swift",
             "created_at": "2010-07-22T01:50:07Z",
-            "watchers_count”:2000,
+            "watchers_count": 2380,
             "language": "Python"
         },
         {
-            "id": 46,
-            "name": “java”,
-            "full_name": "tensorflow/java”,
+            "id": 42,
+            "node_id": "MDEwOlJlcG9zaXRvcnkxMzA5MDI5NDg=",
+            "name": "swift",
+            "full_name": "tensorflow/swift",
+            "private": false,
             "owner": {
                 "login": "tensorflow",
+                "id": 15658638,
                 "avatar_url": "https://avatars.githubusercontent.com/u/15658638?v=4",
-                "html_url": "https://github.com/tensorflow"
+                "url": "https://api.github.com/users/tensorflow",
+                "html_url": "https://github.com/tensorflow",
             },
             "html_url": "https://github.com/tensorflow/swift",
-            "description": “Java for TensorFlow",
+            "description": "Swift for TensorFlow",
+            "url": "https://api.github.com/repos/tensorflow/swift",
             "created_at": "2018-04-24T19:18:14Z",
-            "watchers_count”:60,
-            "language": "Jupyter Notebook",
+            "watchers_count": 6075,
+            "language": "Jupyter Notebook"
         }
     ]
 }

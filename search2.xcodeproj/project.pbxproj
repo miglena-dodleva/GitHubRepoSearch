@@ -13,8 +13,6 @@
 		483036152965BC9300BE71CB /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483036132965BC9300BE71CB /* Owner.swift */; };
 		483036162965BC9300BE71CB /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483036132965BC9300BE71CB /* Owner.swift */; };
 		483036182965BCC600BE71CB /* GithubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483036172965BCC600BE71CB /* GithubResponse.swift */; };
-		483036192965BCC600BE71CB /* GithubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483036172965BCC600BE71CB /* GithubResponse.swift */; };
-		4830361A2965BCC600BE71CB /* GithubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483036172965BCC600BE71CB /* GithubResponse.swift */; };
 		4830361C2965BCEF00BE71CB /* GithubRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4830361B2965BCEF00BE71CB /* GithubRepo.swift */; };
 		483036202965BD3D00BE71CB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4830361F2965BD3D00BE71CB /* Router.swift */; };
 		483036242965BD6A00BE71CB /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483036232965BD6A00BE71CB /* NetworkClient.swift */; };
@@ -22,8 +20,6 @@
 		4830362C2965BDB300BE71CB /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4830362B2965BDB300BE71CB /* GithubApi.swift */; };
 		483036302965BDCA00BE71CB /* MyGithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4830362F2965BDCA00BE71CB /* MyGithubApi.swift */; };
 		483036342965BE0B00BE71CB /* GithubRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483036332965BE0B00BE71CB /* GithubRouter.swift */; };
-		483036352965BE0B00BE71CB /* GithubRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483036332965BE0B00BE71CB /* GithubRouter.swift */; };
-		483036362965BE0B00BE71CB /* GithubRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483036332965BE0B00BE71CB /* GithubRouter.swift */; };
 		485BA29A2964197E0081C336 /* search2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BA2992964197E0081C336 /* search2App.swift */; };
 		485BA29C2964197E0081C336 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BA29B2964197E0081C336 /* ContentView.swift */; };
 		485BA29E296419810081C336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 485BA29D296419810081C336 /* Assets.xcassets */; };
@@ -45,7 +41,6 @@
 		4C73ACB1298AB18400ED57C3 /* GitHubSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73ACB0298AB18400ED57C3 /* GitHubSearchTests.swift */; };
 		4C73ACB3298ABA3100ED57C3 /* Mocks.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C73ACB2298ABA3000ED57C3 /* Mocks.bundle */; };
 		4C8D1B9B2989417B00A8A610 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D1B9A2989417B00A8A610 /* RepositoryView.swift */; };
-		4C8D1B9C2989417B00A8A610 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D1B9A2989417B00A8A610 /* RepositoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -367,11 +362,8 @@
 				48961194296EB4CF00402502 /* ImageDetailView.swift in Sources */,
 				4C73ACAE298AABEE00ED57C3 /* Mocks.swift in Sources */,
 				4896118E296EADE400402502 /* ProfileLinkView.swift in Sources */,
-				483036352965BE0B00BE71CB /* GithubRouter.swift in Sources */,
 				483036152965BC9300BE71CB /* Owner.swift in Sources */,
 				4C73ACB1298AB18400ED57C3 /* GitHubSearchTests.swift in Sources */,
-				4C8D1B9C2989417B00A8A610 /* RepositoryView.swift in Sources */,
-				483036192965BCC600BE71CB /* GithubResponse.swift in Sources */,
 				485BA2AB296419810081C336 /* search2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,8 +372,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				483036362965BE0B00BE71CB /* GithubRouter.swift in Sources */,
-				4830361A2965BCC600BE71CB /* GithubResponse.swift in Sources */,
 				485BA2B5296419810081C336 /* search2UITests.swift in Sources */,
 				483036162965BC9300BE71CB /* Owner.swift in Sources */,
 				485BA2B7296419810081C336 /* search2UITestsLaunchTests.swift in Sources */,
