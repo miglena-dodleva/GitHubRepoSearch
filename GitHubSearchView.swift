@@ -84,7 +84,7 @@ struct GitHubSearchView: View {
                 }
                 else {
                     List{
-                        ForEach(0..<results.count, id: \.self) { index in
+                        ForEach(0..<results.count) { index in
                             RepositoryView(repository: self.results[index]).onAppear {
                                 if index == results.count-1 && !isLoading && totalCount > results.count {
                                     loadData()

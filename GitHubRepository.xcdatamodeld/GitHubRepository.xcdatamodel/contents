@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="GithubRepo" representedClassName="GithubRepo" syncable="YES" codeGenerationType="class">
+    <entity name="GithubRepo" representedClassName="GithubRepo" syncable="YES">
+        <attribute name="avatarimage" optional="YES" attributeType="String"/>
+        <attribute name="avatarname" optional="YES" attributeType="String"/>
+        <attribute name="avatarurl" optional="YES" attributeType="String"/>
         <attribute name="dateofcreating" optional="YES" attributeType="String"/>
         <attribute name="descr" optional="YES" attributeType="String"/>
         <attribute name="fullname" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="language" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="owner" optional="YES"/>
         <attribute name="reviewscount" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="url" optional="YES" attributeType="String"/>
     </entity>

@@ -38,6 +38,7 @@
 		48E6723F296C65F3008D3D76 /* GitHubDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6723E296C65F3008D3D76 /* GitHubDetails.swift */; };
 		4C5E812B298CFDCD00E4263D /* GitHubRepository.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E8129298CFDCD00E4263D /* GitHubRepository.xcdatamodeld */; };
 		4C5E812D298D033600E4263D /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E812C298D033600E4263D /* PersistenceController.swift */; };
+		4C5E812F298D4A4000E4263D /* GithubRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E812E298D4A4000E4263D /* GithubRepo.swift */; };
 		4C73ACAC298A946600ED57C3 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73ACAB298A946600ED57C3 /* ColorView.swift */; };
 		4C73ACAE298AABEE00ED57C3 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73ACAD298AABEE00ED57C3 /* Mocks.swift */; };
 		4C73ACB1298AB18400ED57C3 /* GitHubSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73ACB0298AB18400ED57C3 /* GitHubSearchTests.swift */; };
@@ -92,6 +93,7 @@
 		48E6723E296C65F3008D3D76 /* GitHubDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubDetails.swift; sourceTree = "<group>"; };
 		4C5E812A298CFDCD00E4263D /* GitHubRepository.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitHubRepository.xcdatamodel; sourceTree = "<group>"; };
 		4C5E812C298D033600E4263D /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		4C5E812E298D4A4000E4263D /* GithubRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepo.swift; sourceTree = "<group>"; };
 		4C73ACAB298A946600ED57C3 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		4C73ACAD298AABEE00ED57C3 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		4C73ACB0298AB18400ED57C3 /* GitHubSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchTests.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		485BA28D2964197E0081C336 = {
 			isa = PBXGroup;
 			children = (
+				4C5E812E298D4A4000E4263D /* GithubRepo.swift */,
 				4C5E8129298CFDCD00E4263D /* GitHubRepository.xcdatamodeld */,
 				4C73ACAB298A946600ED57C3 /* ColorView.swift */,
 				4C8D1B9A2989417B00A8A610 /* RepositoryView.swift */,
@@ -340,6 +343,7 @@
 				4C5E812D298D033600E4263D /* PersistenceController.swift in Sources */,
 				483036182965BCC600BE71CB /* GithubResponse.swift in Sources */,
 				483036202965BD3D00BE71CB /* Router.swift in Sources */,
+				4C5E812F298D4A4000E4263D /* GithubRepo.swift in Sources */,
 				483036282965BD7F00BE71CB /* MyNetworkClient.swift in Sources */,
 				483036342965BE0B00BE71CB /* GithubRouter.swift in Sources */,
 				487FB2692966EFD500A884A6 /* MyGithubRepository.swift in Sources */,
