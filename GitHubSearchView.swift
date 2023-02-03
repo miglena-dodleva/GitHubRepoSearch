@@ -21,7 +21,7 @@ struct GitHubSearchView: View {
     @State private var showingAlert = false
     @State private var isLoading: Bool = false
     
-    @State private var results: [GithubRepo] = []
+    @State private var results: [GithubRepoDto] = []
     
     @State private var currentPage: Int = 0
     @State private var totalCount: Int = 0
