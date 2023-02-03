@@ -10,8 +10,8 @@ import Foundation
 
 struct RepositoryView: View {
     
-    private let repo: GithubRepo
-    init(repository: GithubRepo) {
+    private let repo: GithubRepoDto
+    init(repository: GithubRepoDto) {
         self.repo = repository
     }
     
@@ -55,6 +55,6 @@ struct RepositoryView: View {
 
 struct RepositoryView_Previews: PreviewProvider {
     static var previews: some View {
-        RepositoryView(repository: GithubRepo(id: 44838949, name: "Name", description: "My first api", owner: Avatar(avatar:"https://avatars.githubusercontent.com/u/10639145?v=4", ownername: "Viktor", url: "kjh"), fullname: "Swift-API", language: "c++", reviewscount: 77, dateofcreation: "22.2.2222", url: "kkkkk"))
+        RepositoryView(repository: GithubRepoDto(id: 44838949, name: "Name", description: "My first api", owner: Avatar(avatar:"https://avatars.githubusercontent.com/u/10639145?v=4", ownername: "Viktor", url: "kjh"), fullname: "Swift-API", language: "c++", reviewscount: 77, dateofcreation: "22.2.2222", url: "kkkkk"))
     }
 }

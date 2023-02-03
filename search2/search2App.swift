@@ -7,9 +7,13 @@
 
 import SwiftUI
 
+let persistenceController = PersistenceController.shared
 
 @main
+
 struct search2App: App {
+    
+    @Environment(\.scenePhase) var scenePhase
     
     private var githubRepo = MyGithubRepository(githubApi: MyGithubApi(networkClient: MyNetworkClient(), router: GithubRouter()))
     
@@ -17,6 +21,10 @@ struct search2App: App {
         WindowGroup {
             ContentView()
                 .environmentObject(githubRepo)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        }
+        .onChange(of: scenePhase) { _ in
+            persistenceController.save()
         }
     }
 }

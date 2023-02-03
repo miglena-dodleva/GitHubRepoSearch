@@ -11,7 +11,7 @@ import Foundation
 struct GithubResponse: Codable {
     
     var totalCount: Int
-    var items: [GithubRepo]
+    var items: [GithubRepoDto]
     
     enum CodingKeys: String, CodingKey {
         

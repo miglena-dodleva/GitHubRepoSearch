@@ -13,6 +13,8 @@ struct ContentView: View {
     @State private var hideSplashView = false
     @EnvironmentObject var githubRepo: MyGithubRepository
     
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
     //@EnvironmentObject var githubService: GithubRepo
     
     
@@ -35,11 +37,5 @@ struct ContentView: View {
                 }
             }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
