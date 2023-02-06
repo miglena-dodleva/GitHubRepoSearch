@@ -10,7 +10,6 @@ import SwiftUI
 let persistenceController = PersistenceController.shared
 
 @main
-
 struct search2App: App {
     
     @Environment(\.scenePhase) var scenePhase
@@ -22,9 +21,6 @@ struct search2App: App {
             ContentView()
                 .environmentObject(githubRepo)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }
-        .onChange(of: scenePhase) { _ in
-            persistenceController.save()
         }
     }
 }

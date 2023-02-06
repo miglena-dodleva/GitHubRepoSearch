@@ -14,6 +14,8 @@ struct ContentView: View {
     @EnvironmentObject var githubRepo: MyGithubRepository
     
     @Environment(\.managedObjectContext) var managedObjectContext
+//    @FetchRequest(sortDescriptors: []) var items: FetchedResults<GithubRepo>
+
     
     //@EnvironmentObject var githubService: GithubRepo
     
